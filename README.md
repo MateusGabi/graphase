@@ -323,6 +323,8 @@ As future versions of GraphQL adopt new configurable execution capabilities, the
 
 ### JavaScript and Typescript
 
+The Typescript Specification is provided by Microsoft on the oficial Typescript github repository (https://github.com/microsoft/TypeScript/blob/master/doc/spec.md).
+
 ## Example
 
 ```nodejs
