@@ -376,3 +376,10 @@ type Mutations {
     removeUser: Bool
 }
 ```
+
+## Author
+
+👤 **Mateus Gabi Moreira <mateusgabimoreira@gmail.com>**
+
+-   Github: [@mateusgabi](https://github.com/mateusgabi)
+-   Twitter: [@uptogabi](https://twitter.com/uptogabi)
