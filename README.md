@@ -1,31 +1,79 @@
 # Graphase
+
 Create awesome and scalable GraphQL webservices just defining types :)
 
-> Note: *A important step of this project of my CS graduate degree.*
+> Note: _This is an important step of this project of my CS graduate degree._
+
+## Info
+
+The examples are meant to run with **Eclipse Modeling Tools**, version **2019-09**
+
+### Workspaces
+
+The folders **development** and **runtime** folders are meant to be used as Eclipse workspaces. They contain the development and runtime (second Eclipse instance) projects, respectively.
+
+#### Development
+
+The **development** workspace contains the following projects.
+
+_Plugins containing the "GraphQL" metamodel and its implementation, as well as the generated editor:_
+
+- br.unicamp.ic.mo631.GraphQL
+- br.unicamp.ic.mo631.GraphQL.edit
+- br.unicamp.ic.mo631.GraphQL.editor
+
+_Acceleo generator to generate SVG images from GraphQL models:_
+
+- br.unicamp.ic.mo631.GraphQL.gen.svg
+
+_Examples on how to read and write model instances programmatically, that is, using the generated API:_
+
+- br.unicamp.ic.mo631.GraphQL.examples
+
+#### Runtime
+
+The **runtime** workspace contains the following projects:
+
+_Example instances of the "robodsl" metamodel_
+
+- examples
+
+## Setup
+
+1. Clone or download the repository
+2. Open Eclipse using the _development_ folder as workspace
+3. Import the projects from the _development_ folder (_File / Import... / Existing Projects into Workspace_)
+4. Run the launch configuration _"Eclipse Application (new Eclipse instance).launch"_
+5. Import the projects from the _runtime_ folder (_File / Import... / Existing Projects into Workspace_)
 
 ## Goal
+
 Create a powerful tool for develop easy GraphQL webservices.
 
 ### Steps
+
 - [ ] Transform JavaScript/Typescript Model layer into GraphQL Type Schema. It is the project scope.
 - [ ] Generate resolvers. It is a big problem.
 - [ ] Creates a VCS of the generated GraphQL Schema.
 - [ ] Easy deployment into production using Serverless framework or Heroku CLI.
 
 ## Important Concepts
+
 ### GraphQL (https://graphql.org/learn/)
 
 GraphQL Documentation: https://graphql.org/
 GraphQL Specification: https://graphql.github.io/graphql-spec/
 
-> Note: *This project is based on June 2018 Edition Spec*.
+> Note: _This project is based on June 2018 Edition Spec_.
 
 GraphQL is a query language designed to build client applications by providing an intuitive and flexible syntax and system for describing their data requirements and interactions.
 
 GraphQL is not a programming language capable of arbitrary computation, but is instead a language used to query application servers that have capabilities defined in this specification. GraphQL does not mandate a particular programming language or storage system for application servers that implement it. Instead, application servers take their capabilities and map them to a uniform language, type system, and philosophy that GraphQL encodes. This provides a unified interface friendly to product development and a powerful platform for tool‐building.
 
 #### Operations
+
 There are three types of operations that GraphQL models:
+
 - query – a read‐only fetch.
 - mutation – a write followed by a fetch.
 - subscription – a long‐lived request that fetches data in response to source events.
@@ -45,6 +93,7 @@ mutation {
 ```
 
 #### Selection Sets
+
 An operation selects the set of information it needs, and will receive exactly that information and nothing more, avoiding over‐fetching and under‐fetching data.
 
 ```GraphQL
@@ -58,6 +107,7 @@ An operation selects the set of information it needs, and will receive exactly t
 In this query, the id, firstName, and lastName fields form a selection set. Selection sets may also contain fragment references.
 
 #### Fields
+
 A selection set is primarily composed of fields. A field describes one discrete piece of information available to request within a selection set.
 
 Some fields describe complex data or relationships to other data. In order to further explore this data, a field may itself contain a selection set, allowing for deeply nested requests. All GraphQL operations must specify their selections down to fields which return scalar values to ensure an unambiguously shaped response.
@@ -120,6 +170,7 @@ These two queries are semantically identical:
   picture(width: 200, height: 100)
 }
 ```
+
 ```GraphQL
 {
   picture(height: 100, width: 200)
@@ -127,9 +178,11 @@ These two queries are semantically identical:
 ```
 
 #### Field Alias
+
 By default, the key in the response object will use the field name queried. However, you can define a different name by specifying an alias.
 
 In this example, we can fetch two profile pictures of different sizes and ensure the resulting object will not have duplicate keys:
+
 ```GraphQL
 {
   user(id: 4) {
@@ -142,6 +195,7 @@ In this example, we can fetch two profile pictures of different sizes and ensure
 ```
 
 Which returns the result:
+
 ```GraphQL
 {
   "user": {
@@ -154,6 +208,7 @@ Which returns the result:
 ```
 
 #### Fragments
+
 Fragments are the primary unit of composition in GraphQL.
 
 Fragments allow for the reuse of common repeated selections of fields, reducing duplicated text in the document. Inline Fragments can be used directly within a selection to condition upon a type condition when querying against an interface or union.
@@ -257,7 +312,7 @@ If not defined as constant, input values can be specified as a variable. List an
 
 A GraphQL query can be parameterized with variables, maximizing query reuse, and avoiding costly string building in clients at runtime.
 
-If not defined as constant, a *Variable* can be supplied for an input value.
+If not defined as constant, a _Variable_ can be supplied for an input value.
 
 Variables must be defined at the top of an operation and are in scope throughout the execution of that operation.
 
@@ -285,32 +340,33 @@ Values for those variables are provided to a GraphQL service along with a reques
 
 GraphQL describes the types of data expected by query variables. Input types may be lists of another input type, or a non‐null variant of any other input type.
 
-- *Name* - returns an object of a scalar/named type or null;
+- _Name_ - returns an object of a scalar/named type or null;
 
 ```GraphQL
-type User { 
+type User {
     id: ID
     mainStory: Story
 }
 ```
 
-- *Array* - returns an orray of a scalar/named type or null;
+- _Array_ - returns an orray of a scalar/named type or null;
 
 ```GraphQL
-type User { 
+type User {
     stories: [Story]
 }
 ```
 
-- *NonNullable* - returns an object or array of a scalar/named type;
+- _NonNullable_ - returns an object or array of a scalar/named type;
 
 ```GraphQL
-type User { 
+type User {
     id: ID!
 }
 ```
 
 #### Directives
+
 Directives provide a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
 
 In some cases, you need to provide options to alter GraphQL’s execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.
@@ -381,5 +437,5 @@ type Mutations {
 
 👤 **Mateus Gabi Moreira <mateusgabimoreira@gmail.com>**
 
--   Github: [@mateusgabi](https://github.com/mateusgabi)
--   Twitter: [@uptogabi](https://twitter.com/uptogabi)
+- Github: [@mateusgabi](https://github.com/mateusgabi)
+- Twitter: [@uptogabi](https://twitter.com/uptogabi)
