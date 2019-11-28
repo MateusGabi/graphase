@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/br.unicamp.ic.mo631.Graphql/src" modelPluginID="br.unicamp.ic.mo631.Graphql"
+    modelName="Graphql" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Graphql.ecore</foreignModel>
+  <genPackages prefix="Graphql" basePackage="br.unicamp.ic.mo631.Graphql.model" disposableProviderFactory="true"
+      ecorePackage="Graphql.ecore#/">
+    <genClasses ecoreClass="Graphql.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Type/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Graphql.ecore#//Type/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="Graphql.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/isArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/isNullable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Graphql.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Graphql.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Graphql.ecore#//Schema/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Schema/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Graphql.ecore#//ScalarType"/>
+    <genClasses ecoreClass="Graphql.ecore#//SystemType"/>
+    <genClasses ecoreClass="Graphql.ecore#//Int"/>
+    <genClasses ecoreClass="Graphql.ecore#//Float"/>
+    <genClasses ecoreClass="Graphql.ecore#//String"/>
+    <genClasses ecoreClass="Graphql.ecore#//Boolean"/>
+    <genClasses ecoreClass="Graphql.ecore#//ID"/>
+    <genClasses ecoreClass="Graphql.ecore#//Enum">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Graphql.ecore#//Enum/enumvalue"/>
+    </genClasses>
+    <genClasses ecoreClass="Graphql.ecore#//EnumValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//EnumValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//EnumValue/number"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

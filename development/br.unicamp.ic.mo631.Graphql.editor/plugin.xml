@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Graphql -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="br.unicamp.ic.mo631.Graphql.model.Graphql.presentation.GraphqlModelWizardID"
+            name="%_UI_GraphqlModelWizard_label"
+            class="br.unicamp.ic.mo631.Graphql.model.Graphql.presentation.GraphqlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GraphqlModelFile.gif">
+         <description>%_UI_GraphqlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Graphql -->
+      <editor
+            id="br.unicamp.ic.mo631.Graphql.model.Graphql.presentation.GraphqlEditorID"
+            name="%_UI_GraphqlEditor_label"
+            icon="icons/full/obj16/GraphqlModelFile.gif"
+            extensions="graphql"
+            class="br.unicamp.ic.mo631.Graphql.model.Graphql.presentation.GraphqlEditor"
+            contributorClass="br.unicamp.ic.mo631.Graphql.model.Graphql.presentation.GraphqlActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
