@@ -1,0 +1,36 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://org/eclipse/emf/ecp/view/group/model', 'http://www.eclipse.org/emf/2002/Ecore', 'http://www.example.org/Graphql')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aSchema
+ */]
+[template public generateElement(schema : Schema)]
+[comment @main/]
+
+[for (type: Type | schema.type)]
+	[file (type.name + '.java', false, 'UTF-8')]
+		[typeToClass(type) /]
+	[/file]
+[/for]
+[/template]
+
+[template public typeToClass(type: Type)]
+public class [type.name /] {
+
+	[for(attribute: Attribute | type.attribute)]
+	private [getTypeName(attribute.type) /] [attribute.name /];
+	[/for]
+
+}
+[/template]
+
+[template public getTypeName(type: Type)]
+[if (type.oclIsKindOf(ScalarType))]
+[type.eClass().name /][else]
+[type.name /][/if]
+[/template]
