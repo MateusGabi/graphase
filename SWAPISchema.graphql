@@ -1,0 +1,51 @@
+type Film {
+  title: String
+  episode: Int
+  openingCrawl: String
+  director: String
+  producers: [String]
+  releaseDate: String
+  characters: [Character]
+  planets: [Planet]
+  created: String
+  edited: String
+  id: ID
+}
+
+type Character {
+  name: String
+  birthYear: String
+  gender: String
+  height: Int
+  mass: Float
+  homeworld: Planet
+  species: Species
+  created: String
+  edited: String
+  id: ID
+}
+
+type Planet {
+  name: String
+  diameter: Int
+  rotationPeriod: Int
+  orbitalPeriod: Int
+  gravity: String
+  population: Int
+  created: String
+  edited: String
+  id: ID
+}
+
+type Species {
+  name: String
+  classification: String
+  averageHeight: Float
+  agerageLifespan: Int
+  characters: [Characters]
+  films: [Film]
+  language: String
+  created: String
+  edited: String
+  id: ID
+}
