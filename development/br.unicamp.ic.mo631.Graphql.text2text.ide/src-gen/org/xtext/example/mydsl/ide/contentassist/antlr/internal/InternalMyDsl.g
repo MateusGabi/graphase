@@ -2135,13 +2135,13 @@ rule__Attribute__IsArrayAssignment_1_3
 	}
 :
 	(
-		{ before(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); }
+		{ before(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); }
 		(
-			{ before(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); }
-			']'
-			{ after(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); }
+			{ before(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); }
+			' @list'
+			{ after(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); }
 		)
-		{ after(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); }
+		{ after(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); }
 	)
 ;
 finally {

@@ -13,18 +13,144 @@
 [comment @main/]
 
 [for (type: Type | schema.type)]
-	[file (type.name + '.java', false, 'UTF-8')]
-		[typeToClass(type) /]
+	[comment]
+	Model Class
+	[/comment]
+	[file ('com/github/mateusgabi/'+ schema.name.toLowerCase() + '/Model/' + type.name + '.java', false, 'UTF-8')]
+		[typeToClass(schema, type) /]
+	[/file]
+	[comment]
+	DAO Class
+	[/comment]
+	[file ('com/github/mateusgabi/'+ schema.name.toLowerCase() + '/Model/DAO/' + type.name + 'DAO.java', false, 'UTF-8')]
+		[typeToClassDAO(schema, type) /]
+	[/file]
+	[file('com/github/mateusgabi/'+ schema.name.toLowerCase() + '/Model/DAO/IDAO.java', false, 'UTF-8')]
+	
+package com.github.mateusgabi.[schema.name.toLowerCase() /].Model.DAO;
+
+public interface IDao<T> {
+	     
+	    Optional<T> get(String id);
+	     
+	    List<T> getAll();
+	     
+	    void save(T t);
+	     
+	    void update(T t, List<String> params);
+	     
+	    void delete(T t);
+	}
 	[/file]
 [/for]
 [/template]
 
-[template public typeToClass(type: Type)]
+[template public typeToClass(schema: Schema, type: Type)]
+package com.github.mateusgabi.[schema.name.toLowerCase() /].Model;
+
+import java.util.ArrayList;
+
+/**
+ * Generated code by graphase
+ */
 public class [type.name /] {
 
+	/* Attributes */
 	[for(attribute: Attribute | type.attribute)]
-	private [attribute.typeName /] [attribute.name /];
+	[let typeName: EString = attribute.typeName]
+	[let attributeTypeName : EString = attrName(typeName)]
+	[if(attribute.isArray)]
+	private ArrayList<[attributeTypeName.toUpperFirst() /]> [attribute.name /];
+	[elseif(not attribute.isArray)]
+	private [attributeTypeName.toUpperFirst() /] [attribute.name /];
+  	[else]
+	[/if]
+	[/let]
+	[/let]
+	[/for]
+
+	/* getters */
+	[for(attribute: Attribute | type.attribute)]
+	[let typeName: EString = attribute.typeName]
+	[let attributeTypeName : EString = attrName(typeName)]
+	[if(attribute.isArray)]
+	public ArrayList<[attributeTypeName.toUpperFirst() /]> get[attribute.name.toUpperFirst() /]() {
+	[elseif(not attribute.isArray)]
+	public [attributeTypeName.toUpperFirst() /] get[attribute.name.toUpperFirst() /]() {
+  	[else]
+	[/if]
+		return this.[attribute.name /];
+	}
+	[/let]
+	[/let]
+	[/for]
+
+	/* setters */
+	[for(attribute: Attribute | type.attribute)]
+	[let typeName: EString = attribute.typeName]
+	[let attributeTypeName : EString = attrName(typeName)]
+	public void set[attribute.name.toUpperFirst() /]([attributeTypeName.toUpperFirst() /] [attribute.name /]) {
+		this.[attribute.name /] = [attribute.name /];
+	}
+	[/let]
+	[/let]
 	[/for]
 
 }
 [/template]
+
+
+[template public typeToClassDAO(schema: Schema, type: Type)]
+package com.github.mateusgabi.[schema.name.toLowerCase() /].Model.DAO;
+
+import java.util.ArrayList;
+import java.util.Optional;
+import java.lang.Exception;
+
+import com.github.mateusgabi.[schema.name.toLowerCase() /].Model.[type.name /];
+
+/**
+ * Generated code by graphase
+ */
+public class [type.name /]Dao implements IDao<[type.name /]> {
+	
+	@Override
+    public Optional<[type.name /]> get(String id) {
+		//TODO: implement method
+		throws new Exception("Method not implemented yet")
+    }
+     
+    @Override
+    public List<[type.name /]> getAll() {
+		//TODO: implement method
+		throws new Exception("Method not implemented yet")
+    }
+     
+    @Override
+    public void save([type.name /] [type.name.toLowerCase() /]) {
+		//TODO: implement method
+		throws new Exception("Method not implemented yet")
+    }
+     
+    @Override
+    public void update([type.name /] [type.name.toLowerCase() /], ArrayList<String> params) {
+		//TODO: implement method
+		throws new Exception("Method not implemented yet")
+    }
+     
+    @Override
+    public void delete([type.name /] [type.name.toLowerCase() /]) {
+		//TODO: implement method
+		throws new Exception("Method not implemented yet")
+    }
+}
+[/template]
+
+
+[template public attrName(name: EString)]
+[if(name.equalsIgnoreCase('id'))]String[elseif(name.equalsIgnoreCase('Int'))]
+Integer[else]
+[name /][/if]
+[/template]
+
+

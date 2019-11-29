@@ -383,15 +383,15 @@ ruleAttribute returns [EObject current=null]
 			)
 			(
 				(
-					lv_isArray_7_0=']'
+					lv_isArray_7_0=' @list'
 					{
-						newLeafNode(lv_isArray_7_0, grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0());
+						newLeafNode(lv_isArray_7_0, grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getAttributeRule());
 						}
-						setWithLastConsumed($current, "isArray", true, "]");
+						setWithLastConsumed($current, "isArray", true, " @list");
 					}
 				)
 			)

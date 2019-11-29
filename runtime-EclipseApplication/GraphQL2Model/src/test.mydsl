@@ -1,16 +1,16 @@
 Schema {
-	name: 'Swapi'
+	name: 'SWAPI'
 }
 
 type Film {
-  title: string!
+  title: string
   episode: int
   openingCrawl: string
   director: string
-//  producers: [string]
+  producers: string @list
   releaseDate: string
-//  characters: [Character]
-//  planets: [Planet]
+  characters: Character @list
+  planets: Planet @list
   created: string
   edited: string
   id: id
@@ -46,8 +46,8 @@ type Species {
   classification: string
   averageHeight: float
   agerageLifespan: int
-//  characters: [Characters]
-//  films: [Film]
+  characters: Character @list
+  films: Film @list
   language: string
   created: string
   edited: string

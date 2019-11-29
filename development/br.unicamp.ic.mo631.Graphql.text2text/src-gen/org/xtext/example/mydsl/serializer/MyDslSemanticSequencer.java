@@ -60,7 +60,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     (
 	 *         (name=EString typeName=EString isNullable?='!') | 
-	 *         (name=EString typeName=EString isArray?=']') | 
+	 *         (name=EString typeName=EString isArray?=' @list') | 
 	 *         (name=EString typeName=EString isArray?=']' isNullable?='!') | 
 	 *         (name=EString typeName=EString)
 	 *     )

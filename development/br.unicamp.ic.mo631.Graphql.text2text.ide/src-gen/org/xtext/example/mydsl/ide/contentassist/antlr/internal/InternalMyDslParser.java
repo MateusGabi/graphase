@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Int'", "'Float'", "'String'", "'Boolean'", "'ID'", "'Schema {'", "'name:'", "'}'", "':'", "'type '", "' {'", "'Enum'", "'{'", "'attribute'", "'enumvalue'", "','", "'EnumValue'", "'value'", "'number'", "'!'", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Int'", "'Float'", "'String'", "'Boolean'", "'ID'", "'Schema {'", "'name:'", "'}'", "':'", "'type '", "' {'", "'Enum'", "'{'", "'attribute'", "'enumvalue'", "','", "'EnumValue'", "'value'", "'number'", "'!'", "' @list'", "']'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -38,6 +38,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=5;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -2745,7 +2746,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:918:1: ( rule__Attribute__Group_2__2__Impl rule__Attribute__Group_2__3 )
             // InternalMyDsl.g:919:2: rule__Attribute__Group_2__2__Impl rule__Attribute__Group_2__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_11);
             rule__Attribute__Group_2__2__Impl();
 
             state._fsp--;
@@ -3283,7 +3284,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1096:3: ( 'type ' )
             // InternalMyDsl.g:1096:4: 'type '
             {
-            match(input,20,FOLLOW_11); 
+            match(input,20,FOLLOW_12); 
 
             }
 
@@ -3310,7 +3311,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMyDsl.g:1101:4: 'type '
             	    {
-            	    match(input,20,FOLLOW_11); 
+            	    match(input,20,FOLLOW_12); 
 
             	    }
             	    break;
@@ -3355,7 +3356,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1114:1: ( rule__SystemType__Group__1__Impl rule__SystemType__Group__2 )
             // InternalMyDsl.g:1115:2: rule__SystemType__Group__1__Impl rule__SystemType__Group__2
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__SystemType__Group__1__Impl();
 
             state._fsp--;
@@ -3403,7 +3404,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1130:3: ( rule__SystemType__NameAssignment_1 )
             // InternalMyDsl.g:1130:4: rule__SystemType__NameAssignment_1
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_14);
             rule__SystemType__NameAssignment_1();
 
             state._fsp--;
@@ -3434,7 +3435,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMyDsl.g:1135:4: rule__SystemType__NameAssignment_1
             	    {
-            	    pushFollow(FOLLOW_13);
+            	    pushFollow(FOLLOW_14);
             	    rule__SystemType__NameAssignment_1();
 
             	    state._fsp--;
@@ -3558,7 +3559,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1175:1: ( rule__SystemType__Group__3__Impl rule__SystemType__Group__4 )
             // InternalMyDsl.g:1176:2: rule__SystemType__Group__3__Impl rule__SystemType__Group__4
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_15);
             rule__SystemType__Group__3__Impl();
 
             state._fsp--;
@@ -3643,7 +3644,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1202:1: ( rule__SystemType__Group__4__Impl rule__SystemType__Group__5 )
             // InternalMyDsl.g:1203:2: rule__SystemType__Group__4__Impl rule__SystemType__Group__5
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_15);
             rule__SystemType__Group__4__Impl();
 
             state._fsp--;
@@ -3700,7 +3701,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMyDsl.g:1217:3: rule__SystemType__AttributeAssignment_4
             	    {
-            	    pushFollow(FOLLOW_13);
+            	    pushFollow(FOLLOW_14);
             	    rule__SystemType__AttributeAssignment_4();
 
             	    state._fsp--;
@@ -3891,7 +3892,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1283:1: ( rule__Enum__Group__1__Impl rule__Enum__Group__2 )
             // InternalMyDsl.g:1284:2: rule__Enum__Group__1__Impl rule__Enum__Group__2
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Enum__Group__1__Impl();
 
             state._fsp--;
@@ -3976,7 +3977,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1310:1: ( rule__Enum__Group__2__Impl rule__Enum__Group__3 )
             // InternalMyDsl.g:1311:2: rule__Enum__Group__2__Impl rule__Enum__Group__3
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Enum__Group__2__Impl();
 
             state._fsp--;
@@ -4051,7 +4052,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1337:1: ( rule__Enum__Group__3__Impl rule__Enum__Group__4 )
             // InternalMyDsl.g:1338:2: rule__Enum__Group__3__Impl rule__Enum__Group__4
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Enum__Group__3__Impl();
 
             state._fsp--;
@@ -4201,7 +4202,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1391:1: ( rule__Enum__Group__5__Impl rule__Enum__Group__6 )
             // InternalMyDsl.g:1392:2: rule__Enum__Group__5__Impl rule__Enum__Group__6
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Enum__Group__5__Impl();
 
             state._fsp--;
@@ -4286,7 +4287,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1418:1: ( rule__Enum__Group__6__Impl rule__Enum__Group__7 )
             // InternalMyDsl.g:1419:2: rule__Enum__Group__6__Impl rule__Enum__Group__7
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Enum__Group__6__Impl();
 
             state._fsp--;
@@ -4343,7 +4344,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMyDsl.g:1433:3: rule__Enum__Group_6__0
             	    {
-            	    pushFollow(FOLLOW_18);
+            	    pushFollow(FOLLOW_19);
             	    rule__Enum__Group_6__0();
 
             	    state._fsp--;
@@ -4389,7 +4390,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1445:1: ( rule__Enum__Group__7__Impl rule__Enum__Group__8 )
             // InternalMyDsl.g:1446:2: rule__Enum__Group__7__Impl rule__Enum__Group__8
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Enum__Group__7__Impl();
 
             state._fsp--;
@@ -4464,7 +4465,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1472:1: ( rule__Enum__Group__8__Impl rule__Enum__Group__9 )
             // InternalMyDsl.g:1473:2: rule__Enum__Group__8__Impl rule__Enum__Group__9
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Enum__Group__8__Impl();
 
             state._fsp--;
@@ -4539,7 +4540,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1499:1: ( rule__Enum__Group__9__Impl rule__Enum__Group__10 )
             // InternalMyDsl.g:1500:2: rule__Enum__Group__9__Impl rule__Enum__Group__10
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__Enum__Group__9__Impl();
 
             state._fsp--;
@@ -4614,7 +4615,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1526:1: ( rule__Enum__Group__10__Impl rule__Enum__Group__11 )
             // InternalMyDsl.g:1527:2: rule__Enum__Group__10__Impl rule__Enum__Group__11
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Enum__Group__10__Impl();
 
             state._fsp--;
@@ -4699,7 +4700,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1553:1: ( rule__Enum__Group__11__Impl rule__Enum__Group__12 )
             // InternalMyDsl.g:1554:2: rule__Enum__Group__11__Impl rule__Enum__Group__12
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Enum__Group__11__Impl();
 
             state._fsp--;
@@ -4756,7 +4757,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMyDsl.g:1568:3: rule__Enum__Group_11__0
             	    {
-            	    pushFollow(FOLLOW_18);
+            	    pushFollow(FOLLOW_19);
             	    rule__Enum__Group_11__0();
 
             	    state._fsp--;
@@ -5102,7 +5103,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1688:1: ( rule__Enum__Group_11__0__Impl rule__Enum__Group_11__1 )
             // InternalMyDsl.g:1689:2: rule__Enum__Group_11__0__Impl rule__Enum__Group_11__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__Enum__Group_11__0__Impl();
 
             state._fsp--;
@@ -5257,7 +5258,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1742:1: ( rule__EnumValue__Group__0__Impl rule__EnumValue__Group__1 )
             // InternalMyDsl.g:1743:2: rule__EnumValue__Group__0__Impl rule__EnumValue__Group__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__EnumValue__Group__0__Impl();
 
             state._fsp--;
@@ -5332,7 +5333,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1769:1: ( rule__EnumValue__Group__1__Impl rule__EnumValue__Group__2 )
             // InternalMyDsl.g:1770:2: rule__EnumValue__Group__1__Impl rule__EnumValue__Group__2
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__EnumValue__Group__1__Impl();
 
             state._fsp--;
@@ -5407,7 +5408,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1796:1: ( rule__EnumValue__Group__2__Impl rule__EnumValue__Group__3 )
             // InternalMyDsl.g:1797:2: rule__EnumValue__Group__2__Impl rule__EnumValue__Group__3
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__EnumValue__Group__2__Impl();
 
             state._fsp--;
@@ -5482,7 +5483,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1823:1: ( rule__EnumValue__Group__3__Impl rule__EnumValue__Group__4 )
             // InternalMyDsl.g:1824:2: rule__EnumValue__Group__3__Impl rule__EnumValue__Group__4
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__EnumValue__Group__3__Impl();
 
             state._fsp--;
@@ -5578,7 +5579,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1850:1: ( rule__EnumValue__Group__4__Impl rule__EnumValue__Group__5 )
             // InternalMyDsl.g:1851:2: rule__EnumValue__Group__4__Impl rule__EnumValue__Group__5
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__EnumValue__Group__4__Impl();
 
             state._fsp--;
@@ -5899,7 +5900,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:1958:1: ( rule__EnumValue__Group_4__0__Impl rule__EnumValue__Group_4__1 )
             // InternalMyDsl.g:1959:2: rule__EnumValue__Group_4__0__Impl rule__EnumValue__Group_4__1
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__EnumValue__Group_4__0__Impl();
 
             state._fsp--;
@@ -6377,29 +6378,29 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attribute__IsArrayAssignment_1_3"
-    // InternalMyDsl.g:2132:1: rule__Attribute__IsArrayAssignment_1_3 : ( ( ']' ) ) ;
+    // InternalMyDsl.g:2132:1: rule__Attribute__IsArrayAssignment_1_3 : ( ( ' @list' ) ) ;
     public final void rule__Attribute__IsArrayAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:2136:1: ( ( ( ']' ) ) )
-            // InternalMyDsl.g:2137:2: ( ( ']' ) )
+            // InternalMyDsl.g:2136:1: ( ( ( ' @list' ) ) )
+            // InternalMyDsl.g:2137:2: ( ( ' @list' ) )
             {
-            // InternalMyDsl.g:2137:2: ( ( ']' ) )
-            // InternalMyDsl.g:2138:3: ( ']' )
+            // InternalMyDsl.g:2137:2: ( ( ' @list' ) )
+            // InternalMyDsl.g:2138:3: ( ' @list' )
             {
-             before(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); 
-            // InternalMyDsl.g:2139:3: ( ']' )
-            // InternalMyDsl.g:2140:4: ']'
+             before(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); 
+            // InternalMyDsl.g:2139:3: ( ' @list' )
+            // InternalMyDsl.g:2140:4: ' @list'
             {
-             before(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); 
+             before(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); 
             match(input,31,FOLLOW_2); 
-             after(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); 
+             after(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); 
 
             }
 
-             after(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0()); 
+             after(grammarAccess.getAttributeAccess().getIsArrayListKeyword_1_3_0()); 
 
             }
 
@@ -6521,7 +6522,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:2189:4: ']'
             {
              before(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_2_3_0()); 
-            match(input,31,FOLLOW_2); 
+            match(input,32,FOLLOW_2); 
              after(grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_2_3_0()); 
 
             }
@@ -7088,21 +7089,20 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     protected DFA3 dfa3 = new DFA3(this);
-    static final String dfa_1s = "\13\uffff";
-    static final String dfa_2s = "\4\uffff\2\6\1\uffff\1\12\3\uffff";
-    static final String dfa_3s = "\1\4\2\23\3\4\1\uffff\1\4\3\uffff";
-    static final String dfa_4s = "\1\5\2\23\1\5\2\37\1\uffff\1\36\3\uffff";
-    static final String dfa_5s = "\6\uffff\1\4\1\uffff\1\1\1\3\1\2";
-    static final String dfa_6s = "\13\uffff}>";
+    static final String dfa_1s = "\12\uffff";
+    static final String dfa_2s = "\4\uffff\2\6\4\uffff";
+    static final String dfa_3s = "\1\4\2\23\3\4\4\uffff";
+    static final String dfa_4s = "\1\5\2\23\1\5\2\40\4\uffff";
+    static final String dfa_5s = "\6\uffff\1\4\1\3\1\2\1\1";
+    static final String dfa_6s = "\12\uffff}>";
     static final String[] dfa_7s = {
             "\1\1\1\2",
             "\1\3",
             "\1\3",
             "\1\4\1\5",
-            "\2\6\14\uffff\1\6\7\uffff\1\6\3\uffff\1\10\1\7",
-            "\2\6\14\uffff\1\6\7\uffff\1\6\3\uffff\1\10\1\7",
+            "\2\6\14\uffff\1\6\7\uffff\1\6\3\uffff\1\11\1\10\1\7",
+            "\2\6\14\uffff\1\6\7\uffff\1\6\3\uffff\1\11\1\10\1\7",
             "",
-            "\2\12\14\uffff\1\12\7\uffff\1\12\3\uffff\1\11",
             "",
             "",
             ""
@@ -7145,17 +7145,18 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000040000000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000032L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000040030L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000004040000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000030040000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000032L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000040030L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000004040000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000030040000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000800L});
 
 }

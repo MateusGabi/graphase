@@ -149,7 +149,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cTypeNameEStringParserRuleCall_1_2_0 = (RuleCall)cTypeNameAssignment_1_2.eContents().get(0);
 		private final Assignment cIsArrayAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final Keyword cIsArrayRightSquareBracketKeyword_1_3_0 = (Keyword)cIsArrayAssignment_1_3.eContents().get(0);
+		private final Keyword cIsArrayListKeyword_1_3_0 = (Keyword)cIsArrayAssignment_1_3.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Assignment cNameAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cNameEStringParserRuleCall_2_0_0 = (RuleCall)cNameAssignment_2_0.eContents().get(0);
@@ -169,13 +169,13 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////
 		//Attribute:
-		//	name=EString ':' typeName=EString isNullable?='!' | name=EString ':' typeName=EString isArray?=']' | name=EString ':'
-		//	typeName=EString isArray?=']' isNullable?='!' | name=EString ':' typeName=EString;
+		//	name=EString ':' typeName=EString isNullable?='!' | name=EString ':' typeName=EString isArray?=' @list' | name=EString
+		//	':' typeName=EString isArray?=']' isNullable?='!' | name=EString ':' typeName=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
 		////	'@notNull'? isNullable=Boolean0
-		//name=EString ':' typeName=EString isNullable?='!' | name=EString ':' typeName=EString isArray?=']' | name=EString ':'
-		//typeName=EString isArray?=']' isNullable?='!' | name=EString ':' typeName=EString
+		//name=EString ':' typeName=EString isNullable?='!' | name=EString ':' typeName=EString isArray?=' @list' | name=EString
+		//':' typeName=EString isArray?=']' isNullable?='!' | name=EString ':' typeName=EString
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		////	'@notNull'? isNullable=Boolean0
@@ -203,7 +203,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'!'
 		public Keyword getIsNullableExclamationMarkKeyword_0_3_0() { return cIsNullableExclamationMarkKeyword_0_3_0; }
 		
-		//name=EString ':' typeName=EString isArray?=']'
+		//name=EString ':' typeName=EString isArray?=' @list'
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//name=EString
@@ -221,11 +221,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getTypeNameEStringParserRuleCall_1_2_0() { return cTypeNameEStringParserRuleCall_1_2_0; }
 		
-		//isArray?=']'
+		//isArray?=' @list'
 		public Assignment getIsArrayAssignment_1_3() { return cIsArrayAssignment_1_3; }
 		
-		//']'
-		public Keyword getIsArrayRightSquareBracketKeyword_1_3_0() { return cIsArrayRightSquareBracketKeyword_1_3_0; }
+		//' @list'
+		public Keyword getIsArrayListKeyword_1_3_0() { return cIsArrayListKeyword_1_3_0; }
 		
 		//name=EString ':' typeName=EString isArray?=']' isNullable?='!'
 		public Group getGroup_2() { return cGroup_2; }
@@ -697,8 +697,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	////
 	//Attribute:
-	//	name=EString ':' typeName=EString isNullable?='!' | name=EString ':' typeName=EString isArray?=']' | name=EString ':'
-	//	typeName=EString isArray?=']' isNullable?='!' | name=EString ':' typeName=EString;
+	//	name=EString ':' typeName=EString isNullable?='!' | name=EString ':' typeName=EString isArray?=' @list' | name=EString
+	//	':' typeName=EString isArray?=']' isNullable?='!' | name=EString ':' typeName=EString;
 	public AttributeElements getAttributeAccess() {
 		return pAttribute;
 	}

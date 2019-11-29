@@ -21,7 +21,7 @@ EString returns ecore::EString:
 Attribute returns Attribute:
 //	'@notNull'? isNullable=Boolean0
 	(name=EString ':'  typeName=EString isNullable?='!') |
-	(name=EString ':'  typeName=EString isArray?=']') |
+	(name=EString ':'  typeName=EString isArray?=' @list') |
 	(name=EString ':'  typeName=EString isArray?=']' isNullable?='!') |
 	(name=EString ':'  typeName=EString)
 	;
