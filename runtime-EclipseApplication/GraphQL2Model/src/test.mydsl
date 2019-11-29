@@ -7,10 +7,10 @@ type Film {
   episode: int
   openingCrawl: string
   director: string
-  producers: [string]
+//  producers: [string]
   releaseDate: string
-  characters: [Character]
-  planets: [Planet]
+//  characters: [Character]
+//  planets: [Planet]
   created: string
   edited: string
   id: id
@@ -42,14 +42,14 @@ type Planet {
 }
 
 type Species {
-  name: String
-  classification: String
-  averageHeight: Float
-  agerageLifespan: Int
-  characters: [Characters]
-  films: [Film]
-  language: String
-  created: String
-  edited: String
-  id: ID
+  name : string
+  classification: string
+  averageHeight: float
+  agerageLifespan: int
+//  characters: [Characters]
+//  films: [Film]
+  language: string
+  created: string
+  edited: string
+  id: id
 }
