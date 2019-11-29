@@ -19,7 +19,12 @@ EString returns ecore::EString:
 	STRING | ID;
 //
 Attribute returns Attribute:
-	name=EString ':'  typeName=EString;
+//	'@notNull'? isNullable=Boolean0
+	(name=EString ':'  typeName=EString isNullable?='!') |
+	(name=EString ':'  typeName=EString isArray?=']') |
+	(name=EString ':'  typeName=EString isArray?=']' isNullable?='!') |
+	(name=EString ':'  typeName=EString)
+	;
 //	'Attribute'
 //	name=EString
 //	'{'

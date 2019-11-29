@@ -281,44 +281,237 @@ ruleAttribute returns [EObject current=null]
 	(
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_0_0());
-				}
-				lv_name_0_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAttributeRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_0_0_0());
 					}
-					set(
-						$current,
-						"name",
-						lv_name_0_0,
-						"org.xtext.example.mydsl.MyDsl.EString");
-					afterParserOrEnumRuleCall();
-				}
+					lv_name_0_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"name",
+							lv_name_0_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_1=':'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getAttributeAccess().getColonKeyword_0_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getTypeNameEStringParserRuleCall_0_2_0());
+					}
+					lv_typeName_2_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"typeName",
+							lv_typeName_2_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				(
+					lv_isNullable_3_0='!'
+					{
+						newLeafNode(lv_isNullable_3_0, grammarAccess.getAttributeAccess().getIsNullableExclamationMarkKeyword_0_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeRule());
+						}
+						setWithLastConsumed($current, "isNullable", true, "!");
+					}
+				)
 			)
 		)
-		otherlv_1=':'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getAttributeAccess().getColonKeyword_1());
-		}
+		    |
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getAttributeAccess().getTypeNameEStringParserRuleCall_2_0());
-				}
-				lv_typeName_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAttributeRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_1_0_0());
 					}
-					set(
-						$current,
-						"typeName",
-						lv_typeName_2_0,
-						"org.xtext.example.mydsl.MyDsl.EString");
-					afterParserOrEnumRuleCall();
-				}
+					lv_name_4_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"name",
+							lv_name_4_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_5=':'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getAttributeAccess().getColonKeyword_1_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getTypeNameEStringParserRuleCall_1_2_0());
+					}
+					lv_typeName_6_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"typeName",
+							lv_typeName_6_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				(
+					lv_isArray_7_0=']'
+					{
+						newLeafNode(lv_isArray_7_0, grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_1_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeRule());
+						}
+						setWithLastConsumed($current, "isArray", true, "]");
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_2_0_0());
+					}
+					lv_name_8_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"name",
+							lv_name_8_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_9=':'
+			{
+				newLeafNode(otherlv_9, grammarAccess.getAttributeAccess().getColonKeyword_2_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getTypeNameEStringParserRuleCall_2_2_0());
+					}
+					lv_typeName_10_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"typeName",
+							lv_typeName_10_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				(
+					lv_isArray_11_0=']'
+					{
+						newLeafNode(lv_isArray_11_0, grammarAccess.getAttributeAccess().getIsArrayRightSquareBracketKeyword_2_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeRule());
+						}
+						setWithLastConsumed($current, "isArray", true, "]");
+					}
+				)
+			)
+			(
+				(
+					lv_isNullable_12_0='!'
+					{
+						newLeafNode(lv_isNullable_12_0, grammarAccess.getAttributeAccess().getIsNullableExclamationMarkKeyword_2_4_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeRule());
+						}
+						setWithLastConsumed($current, "isNullable", true, "!");
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_3_0_0());
+					}
+					lv_name_13_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"name",
+							lv_name_13_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_14=':'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getAttributeAccess().getColonKeyword_3_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAttributeAccess().getTypeNameEStringParserRuleCall_3_2_0());
+					}
+					lv_typeName_15_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						}
+						set(
+							$current,
+							"typeName",
+							lv_typeName_15_0,
+							"org.xtext.example.mydsl.MyDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
 	)

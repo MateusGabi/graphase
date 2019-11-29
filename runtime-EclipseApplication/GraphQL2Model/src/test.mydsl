@@ -3,7 +3,7 @@ Schema {
 }
 
 type Film {
-  title: string
+  title: string!
   episode: int
   openingCrawl: string
   director: string

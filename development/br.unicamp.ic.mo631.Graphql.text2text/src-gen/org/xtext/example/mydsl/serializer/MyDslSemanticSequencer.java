@@ -16,9 +16,7 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
-import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.mydsl.services.MyDslGrammarAccess;
 
 @SuppressWarnings("all")
@@ -60,19 +58,15 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Attribute returns Attribute
 	 *
 	 * Constraint:
-	 *     (name=EString typeName=EString)
+	 *     (
+	 *         (name=EString typeName=EString isNullable?='!') | 
+	 *         (name=EString typeName=EString isArray?=']') | 
+	 *         (name=EString typeName=EString isArray?=']' isNullable?='!') | 
+	 *         (name=EString typeName=EString)
+	 *     )
 	 */
 	protected void sequence_Attribute(ISerializationContext context, Attribute semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GraphqlPackage.Literals.ATTRIBUTE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GraphqlPackage.Literals.ATTRIBUTE__NAME));
-			if (transientValues.isValueTransient(semanticObject, GraphqlPackage.Literals.ATTRIBUTE__TYPE_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GraphqlPackage.Literals.ATTRIBUTE__TYPE_NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAttributeAccess().getTypeNameEStringParserRuleCall_2_0(), semanticObject.getTypeName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

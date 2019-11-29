@@ -33,9 +33,13 @@ public class MyDslParser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, MyDslGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
+			builder.put(grammarAccess.getAttributeAccess().getAlternatives(), "rule__Attribute__Alternatives");
 			builder.put(grammarAccess.getBoolean0Access().getAlternatives(), "rule__Boolean0__Alternatives");
 			builder.put(grammarAccess.getSchemaAccess().getGroup(), "rule__Schema__Group__0");
-			builder.put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
+			builder.put(grammarAccess.getAttributeAccess().getGroup_0(), "rule__Attribute__Group_0__0");
+			builder.put(grammarAccess.getAttributeAccess().getGroup_1(), "rule__Attribute__Group_1__0");
+			builder.put(grammarAccess.getAttributeAccess().getGroup_2(), "rule__Attribute__Group_2__0");
+			builder.put(grammarAccess.getAttributeAccess().getGroup_3(), "rule__Attribute__Group_3__0");
 			builder.put(grammarAccess.getSystemTypeAccess().getGroup(), "rule__SystemType__Group__0");
 			builder.put(grammarAccess.getEnumAccess().getGroup(), "rule__Enum__Group__0");
 			builder.put(grammarAccess.getEnumAccess().getGroup_6(), "rule__Enum__Group_6__0");
@@ -46,8 +50,18 @@ public class MyDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getSchemaAccess().getNameAssignment_2(), "rule__Schema__NameAssignment_2");
 			builder.put(grammarAccess.getSchemaAccess().getTypeAssignment_4(), "rule__Schema__TypeAssignment_4");
 			builder.put(grammarAccess.getSchemaAccess().getTypeAssignment_5(), "rule__Schema__TypeAssignment_5");
-			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_0(), "rule__Attribute__NameAssignment_0");
-			builder.put(grammarAccess.getAttributeAccess().getTypeNameAssignment_2(), "rule__Attribute__TypeNameAssignment_2");
+			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_0_0(), "rule__Attribute__NameAssignment_0_0");
+			builder.put(grammarAccess.getAttributeAccess().getTypeNameAssignment_0_2(), "rule__Attribute__TypeNameAssignment_0_2");
+			builder.put(grammarAccess.getAttributeAccess().getIsNullableAssignment_0_3(), "rule__Attribute__IsNullableAssignment_0_3");
+			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_1_0(), "rule__Attribute__NameAssignment_1_0");
+			builder.put(grammarAccess.getAttributeAccess().getTypeNameAssignment_1_2(), "rule__Attribute__TypeNameAssignment_1_2");
+			builder.put(grammarAccess.getAttributeAccess().getIsArrayAssignment_1_3(), "rule__Attribute__IsArrayAssignment_1_3");
+			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_2_0(), "rule__Attribute__NameAssignment_2_0");
+			builder.put(grammarAccess.getAttributeAccess().getTypeNameAssignment_2_2(), "rule__Attribute__TypeNameAssignment_2_2");
+			builder.put(grammarAccess.getAttributeAccess().getIsArrayAssignment_2_3(), "rule__Attribute__IsArrayAssignment_2_3");
+			builder.put(grammarAccess.getAttributeAccess().getIsNullableAssignment_2_4(), "rule__Attribute__IsNullableAssignment_2_4");
+			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_3_0(), "rule__Attribute__NameAssignment_3_0");
+			builder.put(grammarAccess.getAttributeAccess().getTypeNameAssignment_3_2(), "rule__Attribute__TypeNameAssignment_3_2");
 			builder.put(grammarAccess.getSystemTypeAccess().getNameAssignment_1(), "rule__SystemType__NameAssignment_1");
 			builder.put(grammarAccess.getSystemTypeAccess().getAttributeAssignment_3(), "rule__SystemType__AttributeAssignment_3");
 			builder.put(grammarAccess.getSystemTypeAccess().getAttributeAssignment_4(), "rule__SystemType__AttributeAssignment_4");
