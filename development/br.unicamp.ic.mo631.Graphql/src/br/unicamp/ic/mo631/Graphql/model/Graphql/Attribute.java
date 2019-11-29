@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getName <em>Name</em>}</li>
  *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#isIsArray <em>Is Array</em>}</li>
  *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#isIsNullable <em>Is Nullable</em>}</li>
- *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getType <em>Type</em>}</li>
+ *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getTypeName <em>Type Name</em>}</li>
  * </ul>
  *
  * @see br.unicamp.ic.mo631.Graphql.model.Graphql.GraphqlPackage#getAttribute()
@@ -92,25 +92,25 @@ public interface Attribute extends EObject {
 	void setIsNullable(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' containment reference.
-	 * @see #setType(Type)
-	 * @see br.unicamp.ic.mo631.Graphql.model.Graphql.GraphqlPackage#getAttribute_Type()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Type Name</em>' attribute.
+	 * @see #setTypeName(String)
+	 * @see br.unicamp.ic.mo631.Graphql.model.Graphql.GraphqlPackage#getAttribute_TypeName()
+	 * @model
 	 * @generated
 	 */
-	Type getType();
+	String getTypeName();
 
 	/**
-	 * Sets the value of the '{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getTypeName <em>Type Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' containment reference.
-	 * @see #getType()
+	 * @param value the new value of the '<em>Type Name</em>' attribute.
+	 * @see #getTypeName()
 	 * @generated
 	 */
-	void setType(Type value);
+	void setTypeName(String value);
 
 } // Attribute

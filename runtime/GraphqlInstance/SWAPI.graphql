@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Graphql:Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Graphql="http://www.example.org/Graphql" name="SWAPI">
   <type xsi:type="Graphql:SystemType" name="Character">
-    <attribute name="name">
-      <type xsi:type="Graphql:String"/>
-    </attribute>
-    <attribute name="appearsIn" isArray="true">
-      <type xsi:type="Graphql:SystemType" name="Episode"/>
-    </attribute>
+    <attribute name="name" typeName="String"/>
+    <attribute name="appearsIn" isArray="true" typeName="Episode"/>
   </type>
   <type xsi:type="Graphql:Enum" name="Episode">
     <enumvalue value="NEWHOPE"/>

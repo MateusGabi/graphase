@@ -15,7 +15,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/isArray"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/isNullable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Graphql.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graphql.ecore#//Attribute/typeName"/>
     </genClasses>
     <genClasses ecoreClass="Graphql.ecore#//Schema">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Graphql.ecore#//Schema/type"/>

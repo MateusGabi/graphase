@@ -4,16 +4,10 @@ package br.unicamp.ic.mo631.Graphql.model.Graphql.impl;
 
 import br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.GraphqlPackage;
-import br.unicamp.ic.mo631.Graphql.model.Graphql.Type;
-
 import java.lang.Boolean;
 import java.lang.String;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -28,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.impl.AttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.impl.AttributeImpl#isIsArray <em>Is Array</em>}</li>
  *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.impl.AttributeImpl#isIsNullable <em>Is Nullable</em>}</li>
- *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.impl.AttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link br.unicamp.ic.mo631.Graphql.model.Graphql.impl.AttributeImpl#getTypeName <em>Type Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -95,14 +89,24 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	protected boolean isNullable = IS_NULLABLE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getTypeName()
 	 * @generated
 	 * @ordered
 	 */
-	protected Type type;
+	protected static final String TYPE_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String typeName = TYPE_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,23 +202,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @generated
 	 */
 	@Override
-	public Type getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
-		Type oldType = type;
-		type = newType;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GraphqlPackage.ATTRIBUTE__TYPE, oldType, newType);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public String getTypeName() {
+		return typeName;
 	}
 
 	/**
@@ -223,32 +212,11 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @generated
 	 */
 	@Override
-	public void setType(Type newType) {
-		if (newType != type) {
-			NotificationChain msgs = null;
-			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GraphqlPackage.ATTRIBUTE__TYPE, null, msgs);
-			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GraphqlPackage.ATTRIBUTE__TYPE, null, msgs);
-			msgs = basicSetType(newType, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GraphqlPackage.ATTRIBUTE__TYPE, newType, newType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case GraphqlPackage.ATTRIBUTE__TYPE:
-				return basicSetType(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setTypeName(String newTypeName) {
+		String oldTypeName = typeName;
+		typeName = newTypeName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphqlPackage.ATTRIBUTE__TYPE_NAME, oldTypeName, typeName));
 	}
 
 	/**
@@ -265,8 +233,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return isIsArray();
 			case GraphqlPackage.ATTRIBUTE__IS_NULLABLE:
 				return isIsNullable();
-			case GraphqlPackage.ATTRIBUTE__TYPE:
-				return getType();
+			case GraphqlPackage.ATTRIBUTE__TYPE_NAME:
+				return getTypeName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -288,8 +256,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case GraphqlPackage.ATTRIBUTE__IS_NULLABLE:
 				setIsNullable((Boolean)newValue);
 				return;
-			case GraphqlPackage.ATTRIBUTE__TYPE:
-				setType((Type)newValue);
+			case GraphqlPackage.ATTRIBUTE__TYPE_NAME:
+				setTypeName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -312,8 +280,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case GraphqlPackage.ATTRIBUTE__IS_NULLABLE:
 				setIsNullable(IS_NULLABLE_EDEFAULT);
 				return;
-			case GraphqlPackage.ATTRIBUTE__TYPE:
-				setType((Type)null);
+			case GraphqlPackage.ATTRIBUTE__TYPE_NAME:
+				setTypeName(TYPE_NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -333,8 +301,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return isArray != IS_ARRAY_EDEFAULT;
 			case GraphqlPackage.ATTRIBUTE__IS_NULLABLE:
 				return isNullable != IS_NULLABLE_EDEFAULT;
-			case GraphqlPackage.ATTRIBUTE__TYPE:
-				return type != null;
+			case GraphqlPackage.ATTRIBUTE__TYPE_NAME:
+				return TYPE_NAME_EDEFAULT == null ? typeName != null : !TYPE_NAME_EDEFAULT.equals(typeName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -355,6 +323,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		result.append(isArray);
 		result.append(", isNullable: ");
 		result.append(isNullable);
+		result.append(", typeName: ");
+		result.append(typeName);
 		result.append(')');
 		return result.toString();
 	}

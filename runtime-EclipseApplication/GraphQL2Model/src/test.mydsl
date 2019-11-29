@@ -1,0 +1,55 @@
+Schema {
+	name: 'Swapi'
+}
+
+type Film {
+  title: string
+  episode: int
+  openingCrawl: string
+  director: string
+  producers: [string]
+  releaseDate: string
+  characters: [Character]
+  planets: [Planet]
+  created: string
+  edited: string
+  id: id
+}
+
+type Character {
+  name : string
+  birthYear: string
+  gender: string
+  height: int
+  mass: float
+  homeworld: Planet
+  species: Species
+  created: string
+  edited: string
+  id: id
+}
+
+type Planet {
+  name : string
+  diameter: int
+  rotationPeriod: int
+  orbitalPeriod: int
+  gravity: string
+  population: int
+  created: string
+  edited: string
+  id: id
+}
+
+type Species {
+  name: String
+  classification: String
+  averageHeight: Float
+  agerageLifespan: Int
+  characters: [Characters]
+  films: [Film]
+  language: String
+  created: String
+  edited: String
+  id: ID
+}

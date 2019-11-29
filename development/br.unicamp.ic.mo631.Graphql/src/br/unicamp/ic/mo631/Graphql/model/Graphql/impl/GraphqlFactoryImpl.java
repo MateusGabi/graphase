@@ -10,8 +10,6 @@ import br.unicamp.ic.mo631.Graphql.model.Graphql.ID;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.Int;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.Schema;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.SystemType;
-import br.unicamp.ic.mo631.Graphql.model.Graphql.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;

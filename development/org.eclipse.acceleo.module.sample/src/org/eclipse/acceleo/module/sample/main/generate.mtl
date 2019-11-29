@@ -23,14 +23,8 @@
 public class [type.name /] {
 
 	[for(attribute: Attribute | type.attribute)]
-	private [getTypeName(attribute.type) /] [attribute.name /];
+	private [attribute.typeName /] [attribute.name /];
 	[/for]
 
 }
-[/template]
-
-[template public getTypeName(type: Type)]
-[if (type.oclIsKindOf(ScalarType))]
-[type.eClass().name /][else]
-[type.name /][/if]
 [/template]

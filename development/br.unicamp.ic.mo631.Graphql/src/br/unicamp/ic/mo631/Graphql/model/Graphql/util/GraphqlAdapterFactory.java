@@ -11,8 +11,6 @@ import br.unicamp.ic.mo631.Graphql.model.Graphql.ScalarType;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.Schema;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.SystemType;
 import br.unicamp.ic.mo631.Graphql.model.Graphql.Type;
-import br.unicamp.ic.mo631.Graphql.model.Graphql.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 

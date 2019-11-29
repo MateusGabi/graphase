@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: br.unicamp.ic.mo631.Graphql.text2text.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: br.unicamp.ic.mo631.Graphql.text2text.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: br.unicamp.ic.mo631.Graphql.text2text.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: br.unicamp.ic.mo631.Graphql.text2text,
+ br.unicamp.ic.mo631.Graphql.text2text.ide,
+ br.unicamp.ic.mo631.Graphql,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.example.mydsl.ui.contentassist,
+ br.unicamp.ic.mo631.Graphql.text2text.ui.internal,
+ org.xtext.example.mydsl.ui.quickfix
+Bundle-Activator: br.unicamp.ic.mo631.Graphql.text2text.ui.internal.Text2textActivator

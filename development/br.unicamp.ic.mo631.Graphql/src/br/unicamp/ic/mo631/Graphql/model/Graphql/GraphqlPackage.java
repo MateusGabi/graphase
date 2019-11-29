@@ -141,13 +141,13 @@ public interface GraphqlPackage extends EPackage {
 	int ATTRIBUTE__IS_NULLABLE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * The feature id for the '<em><b>Type Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__TYPE = 3;
+	int ATTRIBUTE__TYPE_NAME = 3;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -716,15 +716,15 @@ public interface GraphqlPackage extends EPackage {
 	EAttribute getAttribute_IsNullable();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getTypeName <em>Type Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getType()
+	 * @return the meta object for the attribute '<em>Type Name</em>'.
+	 * @see br.unicamp.ic.mo631.Graphql.model.Graphql.Attribute#getTypeName()
 	 * @see #getAttribute()
 	 * @generated
 	 */
-	EReference getAttribute_Type();
+	EAttribute getAttribute_TypeName();
 
 	/**
 	 * Returns the meta object for class '{@link br.unicamp.ic.mo631.Graphql.model.Graphql.Schema <em>Schema</em>}'.
@@ -965,12 +965,12 @@ public interface GraphqlPackage extends EPackage {
 		EAttribute ATTRIBUTE__IS_NULLABLE = eINSTANCE.getAttribute_IsNullable();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Type Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+		EAttribute ATTRIBUTE__TYPE_NAME = eINSTANCE.getAttribute_TypeName();
 
 		/**
 		 * The meta object literal for the '{@link br.unicamp.ic.mo631.Graphql.model.Graphql.impl.SchemaImpl <em>Schema</em>}' class.
