@@ -17,31 +17,19 @@ Type returns Type:
 
 EString returns ecore::EString:
 	STRING | ID;
-//
+
 Attribute returns Attribute:
-//	'@notNull'? isNullable=Boolean0
-	(name=EString ':'  typeName=EString isNullable?='!') |
+	//TODO: implement nullable exceptions
+	(name=EString ':'  typeName=EString isNullable?=' @nullable') |
 	(name=EString ':'  typeName=EString isArray?=' @list') |
-	(name=EString ':'  typeName=EString isArray?=']' isNullable?='!') |
+	(name=EString ':'  typeName=EString isArray?=' @list' isNullable?=' @nullable') |
 	(name=EString ':'  typeName=EString)
 	;
-//	'Attribute'
-//	name=EString
-//	'{'
-//		('isArray' isArray=Boolean0)?
-//		('isNullable' isNullable=Boolean0)?
-//		'type' type=Type
-//	'}';
 
 SystemType returns SystemType:
 	'type ' + name=EString + ' {'
 		attribute+=Attribute ( attribute+=Attribute)*
 	'}';
-//	'SystemType'
-//	name=EString
-//	'{'
-//		'attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' 
-//	'}';
 
 Int0 returns Int:
 	'Int';
@@ -58,7 +46,7 @@ Boolean returns Boolean:
 ID0 returns ID:
 	'ID';
 
-//TODO
+//TODO implement support to enum
 Enum returns Enum:
 	'Enum'
 	name=EString
