@@ -22,13 +22,13 @@ _Plugins containing the "GraphQL" metamodel and its implementation, as well as t
 - br.unicamp.ic.mo631.GraphQL.edit
 - br.unicamp.ic.mo631.GraphQL.editor
 
-_Acceleo generator to generate SVG images from GraphQL models:_
+_Acceleo generator to generate Java Code from GraphQL model:_
 
-- br.unicamp.ic.mo631.GraphQL.gen.svg
+- org.eclipse.acceleo.module.sample
+- org.eclipse.acceleo.module.sample.ui
 
-_Examples on how to read and write model instances programmatically, that is, using the generated API:_
-
-- br.unicamp.ic.mo631.GraphQL.examples
+_Xtext transformer text to model_:
+- br.unicamp.ic.mo631.GraphQL.text2text*
 
 #### Runtime
 
