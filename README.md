@@ -48,14 +48,14 @@ _Example instances of the "robodsl" metamodel_
 
 ## Goal
 
-Create a powerful tool for develop easy GraphQL webservices.
+Create a powerful tool for develop easy webservices.
 
 ### Steps
 
-- [ ] Transform JavaScript/Typescript Model layer into GraphQL Type Schema. It is the project scope.
-- [ ] Generate resolvers. It is a big problem.
-- [ ] Creates a VCS of the generated GraphQL Schema.
-- [ ] Easy deployment into production using Serverless framework or Heroku CLI.
+- [x] Transform GraphQL Type Schema into Java Code (Model and DAO). It is the project scope.
+- [ ] Support Query and Mutation types. It is a big problem.
+- [ ] Creates a Version Control System of the generated code in order to support API evolution.
+- [ ] Easy deployment into production using Spring Framework or Heroku CLI.
 
 ## Important Concepts
 
